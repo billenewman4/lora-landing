@@ -1,0 +1,8 @@
+export { Logo } from "./Logo";
+export { Header } from "./Header";
+export { Hero } from "./Hero";
+export { Features } from "./Features";
+export { HowItWorks } from "./HowItWorks";
+export { SocialProof } from "./SocialProof";
+export { CTA } from "./CTA";
+export { Footer } from "./Footer";
