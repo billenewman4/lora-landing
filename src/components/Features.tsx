@@ -1,51 +1,40 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  DollarSign,
-  TrendingUp,
-  Target,
-  Scale,
-  Bell,
-  BarChart3,
-} from "lucide-react";
+import { DollarSign, Package, TrendingUp, Bell } from "lucide-react";
 
 const features = [
   {
     icon: DollarSign,
-    title: "Find Hidden Margin",
+    title: "Pricing That Keeps Up",
+    outcome: "Never miss a margin opportunity",
     description:
-      "Surface pricing gaps and profit leaks you didn't know existed.",
+      "AI adjusts prices as costs, market conditions, and inventory levels change. Customer-specific rules built in.",
+    metric: "Avg 8% margin improvement",
+  },
+  {
+    icon: Package,
+    title: "Inventory Intelligence",
+    outcome: "Right stock, right time",
+    description:
+      "Prevent stockouts and overstock with demand-based reorder points and seasonal forecasting.",
+    metric: "50% inventory reduction",
   },
   {
     icon: TrendingUp,
-    title: "Prices That Keep Up",
+    title: "Demand Forecasting",
+    outcome: "See what's coming",
     description:
-      "Recommendations that adjust as your costs, market, and inventory change.",
-  },
-  {
-    icon: Target,
-    title: "See Demand Coming",
-    description:
-      "Forecast seasonality, trends, and large orders before they hit.",
-  },
-  {
-    icon: Scale,
-    title: "Right Stock, Right Time",
-    description:
-      "Reorder intelligence that prevents stockouts and overstock.",
+      "Predict seasonality, trends, and large orders before they hit. Plan ahead with confidence.",
+    metric: "3-month forward visibility",
   },
   {
     icon: Bell,
-    title: "Alerts Before Problems",
+    title: "Proactive Alerts",
+    outcome: "Problems flagged before they hurt",
     description:
-      "Cost spikes, margin erosion, inventory risks — flagged before they hurt.",
-  },
-  {
-    icon: BarChart3,
-    title: "Data You Can Trust",
-    description:
-      "Every recommendation backed by real transaction history and market data.",
+      "Cost spikes, margin erosion, inventory risks — surfaced automatically so you can act fast.",
+    metric: "Real-time monitoring",
   },
 ];
 
@@ -64,15 +53,13 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.5,
-    },
+    transition: { duration: 0.5 },
   },
 };
 
 export function Features() {
   return (
-    <section id="features" className="py-24 bg-neutral-50">
+    <section className="py-24 bg-white" id="features">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section header */}
         <motion.div
@@ -83,45 +70,53 @@ export function Features() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 mb-4">
-            Everything you need to{" "}
-            <span className="gradient-text">optimize operations</span>
+            Built for <span className="gradient-text">operations teams</span>
           </h2>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            From pricing to forecasting to inventory — Lora handles the
-            complexity so you can focus on growing your business.
+            Tools that make your team more effective — not more tools to manage.
           </p>
         </motion.div>
 
-        {/* Features grid */}
+        {/* Features grid - 2x2 */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid md:grid-cols-2 gap-6"
         >
           {features.map((feature) => (
             <motion.div
               key={feature.title}
               variants={itemVariants}
-              className="group relative bg-white rounded-2xl p-8 border border-neutral-200 hover:border-neutral-900 hover:shadow-xl transition-all duration-300"
+              className="group relative bg-neutral-50 rounded-2xl p-8 border border-neutral-200 hover:border-neutral-300 hover:shadow-lg transition-all duration-300"
             >
-              {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-neutral-900 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <feature.icon className="w-6 h-6 text-white" />
+              {/* Icon and title row */}
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-neutral-900 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-neutral-900 mb-1">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm font-medium text-neutral-500">
+                    {feature.outcome}
+                  </p>
+                </div>
               </div>
 
-              {/* Content */}
-              <h3 className="text-lg font-semibold text-neutral-900 mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-neutral-600 leading-relaxed">
+              {/* Description */}
+              <p className="text-neutral-600 mb-4 leading-relaxed">
                 {feature.description}
               </p>
 
-              {/* Corner accent */}
-              <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden rounded-tr-2xl">
-                <div className="absolute top-0 right-0 w-32 h-1 bg-neutral-900 transform rotate-45 translate-x-8 -translate-y-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              {/* Metric badge */}
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-neutral-100 rounded-full">
+                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
+                <span className="text-sm font-medium text-neutral-700">
+                  {feature.metric}
+                </span>
               </div>
             </motion.div>
           ))}

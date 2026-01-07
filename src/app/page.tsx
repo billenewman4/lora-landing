@@ -1,9 +1,12 @@
 import {
   Header,
   Hero,
+  ResultsMetrics,
   Features,
-  HowItWorks,
+  ImplementationTimeline,
+  IntegrationShowcase,
   SocialProof,
+  FAQ,
   CTA,
   Footer,
 } from "@/components";
@@ -14,9 +17,12 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <ResultsMetrics />
         <Features />
-        <HowItWorks />
+        <ImplementationTimeline />
+        <IntegrationShowcase />
         <SocialProof />
+        <FAQ />
         <CTA />
       </main>
       <Footer />

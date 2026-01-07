@@ -9,12 +9,16 @@ const testimonials = [
       "This is what we've been missing for the last eight months... the last forty-two years.",
     author: "VP of Procurement",
     company: "Food Ingredients Distributor",
+    industry: "Food & Beverage",
+    result: "Reduced pricing time by 85%",
   },
   {
     quote:
       "At least we have a starting point. Instead of me spending all the time doing the logic.",
     author: "Operations Manager",
     company: "Specialty Bakery Supplier",
+    industry: "Food Manufacturing",
+    result: "Cut inventory analysis from days to hours",
   },
 ];
 
@@ -31,31 +35,11 @@ export function SocialProof() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 mb-4">
-            Trusted by{" "}
-            <span className="gradient-text">operations leaders</span>
+            What operations leaders say
           </h2>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            See what our customers have to say about transforming their
-            operations with Lora.
+            Hear from teams who transformed their pricing and inventory operations with Lora.
           </p>
-        </motion.div>
-
-        {/* Logos placeholder */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-wrap items-center justify-center gap-12 mb-16 opacity-40"
-        >
-          {[1, 2, 3, 4].map((i) => (
-            <div
-              key={i}
-              className="w-28 h-10 bg-neutral-400 rounded flex items-center justify-center text-white text-xs font-medium"
-            >
-              Client {i}
-            </div>
-          ))}
         </motion.div>
 
         {/* Testimonials */}
@@ -67,17 +51,34 @@ export function SocialProof() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative bg-white rounded-2xl p-8 border border-neutral-200 hover:border-neutral-300 transition-colors"
+              className="relative bg-white rounded-2xl p-8 border border-neutral-200 hover:border-neutral-300 hover:shadow-lg transition-all"
             >
               {/* Quote icon */}
               <div className="absolute -top-4 left-8 w-8 h-8 bg-neutral-900 rounded-full flex items-center justify-center">
                 <Quote className="w-4 h-4 text-white" />
               </div>
 
+              {/* Industry badge */}
+              <div className="mb-4 mt-2">
+                <span className="inline-block px-3 py-1 bg-neutral-100 text-neutral-600 text-xs font-medium rounded-full">
+                  {testimonial.industry}
+                </span>
+              </div>
+
               {/* Quote text */}
-              <blockquote className="text-lg text-neutral-700 leading-relaxed mb-6 mt-2">
+              <blockquote className="text-lg text-neutral-700 leading-relaxed mb-6">
                 &ldquo;{testimonial.quote}&rdquo;
               </blockquote>
+
+              {/* Result highlight */}
+              <div className="mb-6 p-4 bg-neutral-50 rounded-xl border border-neutral-100">
+                <div className="text-xs text-neutral-500 uppercase tracking-wide font-medium mb-1">
+                  Result
+                </div>
+                <div className="text-neutral-900 font-semibold">
+                  {testimonial.result}
+                </div>
+              </div>
 
               {/* Author */}
               <div className="flex items-center gap-4">

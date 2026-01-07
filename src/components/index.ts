@@ -1,9 +1,12 @@
 export { Logo } from "./Logo";
 export { Header } from "./Header";
 export { Hero } from "./Hero";
+export { ResultsMetrics } from "./ResultsMetrics";
 export { Features } from "./Features";
-export { HowItWorks } from "./HowItWorks";
+export { ImplementationTimeline } from "./ImplementationTimeline";
+export { IntegrationShowcase } from "./IntegrationShowcase";
 export { SocialProof } from "./SocialProof";
+export { FAQ } from "./FAQ";
 export { CTA } from "./CTA";
 export { Footer } from "./Footer";
 export { ProductMockup } from "./ProductMockup";
