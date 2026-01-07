@@ -4,11 +4,11 @@
   --background: #ffffff;
   --foreground: #0f172a;
 
-  /* Brand colors */
-  --primary: #6366f1;
-  --primary-dark: #4f46e5;
-  --secondary: #8b5cf6;
-  --accent: #a78bfa;
+  /* Brand colors - Black & White / Monochrome */
+  --primary: #0f172a;
+  --primary-dark: #020617;
+  --secondary: #334155;
+  --accent: #64748b;
 
   /* Neutrals */
   --muted: #f8fafc;
@@ -56,7 +56,7 @@ html {
 /* Subtle grid pattern */
 .grid-pattern {
   background-image:
-    linear-gradient(to right, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
   background-size: 64px 64px;
 }

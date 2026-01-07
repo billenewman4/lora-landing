@@ -7,11 +7,8 @@ import {
   ShoppingCart,
   TrendingUp,
   Settings,
-  Search,
-  ChevronDown,
   AlertTriangle,
   Check,
-  ArrowRight,
   Bot,
   Send,
 } from "lucide-react";
@@ -101,7 +98,7 @@ export function ProductMockup() {
           <div className="w-48 bg-white border-r border-slate-100 p-4 hidden sm:block">
             {/* Logo */}
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center">
                 <span className="text-white text-xs font-bold">L</span>
               </div>
               <span className="font-semibold text-slate-800">Lora</span>
@@ -114,7 +111,7 @@ export function ProductMockup() {
                   key={item.label}
                   className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm ${
                     item.active
-                      ? "bg-indigo-50 text-indigo-700 font-medium"
+                      ? "bg-slate-100 text-slate-900 font-medium"
                       : "text-slate-600 hover:bg-slate-50"
                   }`}
                 >
@@ -148,7 +145,7 @@ export function ProductMockup() {
                     <div className="text-slate-500">Healthy</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-indigo-600">2,174</div>
+                    <div className="font-semibold text-slate-600">2,174</div>
                     <div className="text-slate-500">Overstock</div>
                   </div>
                 </div>
@@ -210,12 +207,12 @@ export function ProductMockup() {
                     <div className="font-medium text-slate-800 text-sm">
                       AI Pricing Recommendations
                     </div>
-                    <div className="text-xs text-indigo-600 font-medium">
+                    <div className="text-xs text-slate-600 font-medium">
                       72 SKUs
                     </div>
                   </div>
                   <div className="flex gap-2">
-                    <div className="px-3 py-1.5 bg-indigo-600 text-white rounded-lg text-xs font-medium">
+                    <div className="px-3 py-1.5 bg-slate-900 text-white rounded-lg text-xs font-medium">
                       Fresh Beef
                     </div>
                     <div className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-lg text-xs">
@@ -262,8 +259,8 @@ export function ProductMockup() {
               <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
                 <div className="p-4 border-b border-slate-100 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center">
-                      <TrendingUp className="w-4 h-4 text-indigo-500" />
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center">
+                      <TrendingUp className="w-4 h-4 text-slate-600" />
                     </div>
                     <div>
                       <div className="font-medium text-slate-800 text-sm">
@@ -274,7 +271,7 @@ export function ProductMockup() {
                       </div>
                     </div>
                   </div>
-                  <div className="px-2 py-1 bg-indigo-100 text-indigo-600 rounded text-xs font-medium">
+                  <div className="px-2 py-1 bg-slate-100 text-slate-600 rounded text-xs font-medium">
                     2,174 SKUs
                   </div>
                 </div>
@@ -282,15 +279,15 @@ export function ProductMockup() {
                   {overstockItems.map((item) => (
                     <div
                       key={item.sku}
-                      className="flex items-center justify-between p-2 bg-indigo-50/50 rounded-lg border-l-2 border-indigo-400"
+                      className="flex items-center justify-between p-2 bg-slate-50 rounded-lg border-l-2 border-slate-400"
                     >
                       <div>
-                        <div className="text-xs font-medium text-indigo-700">
+                        <div className="text-xs font-medium text-slate-700">
                           {item.sku}
                         </div>
                         <div className="text-xs text-slate-500">{item.name}</div>
                       </div>
-                      <span className="text-xs font-medium text-indigo-600">
+                      <span className="text-xs font-medium text-slate-600">
                         {item.qty}
                       </span>
                     </div>
@@ -301,12 +298,12 @@ export function ProductMockup() {
 
             {/* AI Assistant floating */}
             <div className="absolute bottom-4 right-4 w-64 bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden hidden lg:block">
-              <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white">
+              <div className="p-3 bg-slate-900 text-white">
                 <div className="flex items-center gap-2">
                   <Bot className="w-5 h-5" />
                   <span className="font-medium text-sm">AI Assistant</span>
                 </div>
-                <p className="text-xs text-indigo-100 mt-1">
+                <p className="text-xs text-slate-300 mt-1">
                   Ask about SKUs, margins, inventory
                 </p>
               </div>
@@ -318,7 +315,7 @@ export function ProductMockup() {
                     className="flex-1 text-xs bg-transparent outline-none text-slate-600 placeholder:text-slate-400"
                     readOnly
                   />
-                  <button className="w-7 h-7 bg-indigo-500 rounded-lg flex items-center justify-center hover:bg-indigo-600">
+                  <button className="w-7 h-7 bg-slate-900 rounded-lg flex items-center justify-center hover:bg-slate-800">
                     <Send className="w-3.5 h-3.5 text-white" />
                   </button>
                 </div>
@@ -329,7 +326,7 @@ export function ProductMockup() {
       </div>
 
       {/* Shadow/glow effect */}
-      <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-indigo-500/20 rounded-2xl blur-2xl -z-10" />
+      <div className="absolute -inset-4 bg-gradient-to-r from-slate-400/20 via-slate-500/20 to-slate-400/20 rounded-2xl blur-2xl -z-10" />
     </div>
   );
 }

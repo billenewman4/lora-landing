@@ -52,7 +52,7 @@ export function HowItWorks() {
         {/* Steps */}
         <div className="relative">
           {/* Connecting line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-200 via-purple-200 to-indigo-200 -translate-y-1/2" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 -translate-y-1/2" />
 
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {steps.map((step, index) => (
@@ -72,8 +72,8 @@ export function HowItWorks() {
                   </div>
 
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-2xl bg-indigo-50 flex items-center justify-center mb-6 mt-2">
-                    <step.icon className="w-7 h-7 text-indigo-600" />
+                  <div className="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center mb-6 mt-2">
+                    <step.icon className="w-7 h-7 text-slate-700" />
                   </div>
 
                   {/* Content */}

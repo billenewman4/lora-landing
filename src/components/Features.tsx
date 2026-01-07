@@ -16,54 +16,54 @@ const features = [
     title: "Find Hidden Margin",
     description:
       "Surface pricing gaps and profit leaks you didn't know existed.",
-    color: "from-emerald-500 to-teal-500",
-    bgColor: "bg-emerald-50",
-    iconColor: "text-emerald-600",
+    color: "from-slate-700 to-slate-900",
+    bgColor: "bg-slate-100",
+    iconColor: "text-slate-700",
   },
   {
     icon: TrendingUp,
     title: "Prices That Keep Up",
     description:
       "Recommendations that adjust as your costs, market, and inventory change.",
-    color: "from-blue-500 to-cyan-500",
-    bgColor: "bg-blue-50",
-    iconColor: "text-blue-600",
+    color: "from-slate-600 to-slate-800",
+    bgColor: "bg-slate-100",
+    iconColor: "text-slate-700",
   },
   {
     icon: Target,
     title: "See Demand Coming",
     description:
       "Forecast seasonality, trends, and large orders before they hit.",
-    color: "from-purple-500 to-pink-500",
-    bgColor: "bg-purple-50",
-    iconColor: "text-purple-600",
+    color: "from-slate-700 to-slate-900",
+    bgColor: "bg-slate-100",
+    iconColor: "text-slate-700",
   },
   {
     icon: Scale,
     title: "Right Stock, Right Time",
     description:
       "Reorder intelligence that prevents stockouts and overstock.",
-    color: "from-orange-500 to-amber-500",
-    bgColor: "bg-orange-50",
-    iconColor: "text-orange-600",
+    color: "from-slate-600 to-slate-800",
+    bgColor: "bg-slate-100",
+    iconColor: "text-slate-700",
   },
   {
     icon: Bell,
     title: "Alerts Before Problems",
     description:
       "Cost spikes, margin erosion, inventory risks — flagged before they hurt.",
-    color: "from-red-500 to-rose-500",
-    bgColor: "bg-red-50",
-    iconColor: "text-red-600",
+    color: "from-slate-700 to-slate-900",
+    bgColor: "bg-slate-100",
+    iconColor: "text-slate-700",
   },
   {
     icon: BarChart3,
     title: "Data You Can Trust",
     description:
       "Every recommendation backed by real transaction history and market data.",
-    color: "from-indigo-500 to-violet-500",
-    bgColor: "bg-indigo-50",
-    iconColor: "text-indigo-600",
+    color: "from-slate-600 to-slate-800",
+    bgColor: "bg-slate-100",
+    iconColor: "text-slate-700",
   },
 ];
 

@@ -22,7 +22,7 @@ export function CTA() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white mb-4">
               Ready to stop leaving money on the table?
             </h2>
-            <p className="text-lg text-indigo-100 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
               Join the distributors and manufacturers who are transforming their
               operations with AI. Let&apos;s talk about what Lora can do for you.
             </p>
@@ -30,7 +30,7 @@ export function CTA() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.a
                 href="mailto:hello@lora.ai"
-                className="group px-8 py-4 text-base font-medium text-indigo-600 bg-white rounded-full hover:bg-indigo-50 transition-colors shadow-xl flex items-center gap-2"
+                className="group px-8 py-4 text-base font-medium text-slate-900 bg-white rounded-full hover:bg-slate-50 transition-colors shadow-xl flex items-center gap-2"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -40,7 +40,7 @@ export function CTA() {
               </motion.a>
             </div>
 
-            <p className="mt-6 text-sm text-indigo-200">
+            <p className="mt-6 text-sm text-slate-400">
               No commitment required. We&apos;ll show you how it works.
             </p>
           </div>

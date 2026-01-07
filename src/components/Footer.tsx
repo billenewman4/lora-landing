@@ -12,7 +12,7 @@ export function Footer() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div className="relative w-8 h-8">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg opacity-90" />
+              <div className="absolute inset-0 bg-slate-700 rounded-lg" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg
                   viewBox="0 0 24 24"

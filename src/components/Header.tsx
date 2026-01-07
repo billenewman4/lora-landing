@@ -15,7 +15,7 @@ export function Header() {
         <Logo />
         <motion.a
           href="#contact"
-          className="px-5 py-2.5 text-sm font-medium text-white rounded-full gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-indigo-500/25"
+          className="px-5 py-2.5 text-sm font-medium text-white rounded-full gradient-bg hover:opacity-90 transition-opacity shadow-lg shadow-slate-500/25"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >

@@ -11,8 +11,8 @@ export function Hero() {
       <div className="absolute inset-0 grid-pattern" />
 
       {/* Gradient orbs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-indigo-200 rounded-full blur-3xl opacity-30" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-purple-200 rounded-full blur-3xl opacity-30" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-slate-200 rounded-full blur-3xl opacity-30" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-slate-300 rounded-full blur-3xl opacity-30" />
 
       <div className="relative max-w-6xl mx-auto px-6 text-center">
         {/* Badge */}
@@ -20,11 +20,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-sm font-medium mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-sm font-medium mb-8"
         >
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-slate-900"></span>
           </span>
           AI-Powered Operations
         </motion.div>
@@ -60,7 +60,7 @@ export function Hero() {
         >
           <motion.a
             href="#contact"
-            className="group px-8 py-4 text-base font-medium text-white rounded-full gradient-bg hover:opacity-90 transition-all shadow-xl shadow-indigo-500/25 flex items-center gap-2"
+            className="group px-8 py-4 text-base font-medium text-white rounded-full gradient-bg hover:opacity-90 transition-all shadow-xl shadow-slate-500/25 flex items-center gap-2"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

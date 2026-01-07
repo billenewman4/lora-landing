@@ -81,7 +81,7 @@ export function SocialProof() {
 
               {/* Author */}
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-400 to-purple-400" />
+                <div className="w-10 h-10 rounded-full bg-slate-300" />
                 <div>
                   <div className="font-medium text-slate-900">
                     {testimonial.author}
