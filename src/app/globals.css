@@ -2,18 +2,18 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0f172a;
+  --foreground: #0a0a0a;
 
-  /* Brand colors - Black & White / Monochrome */
-  --primary: #0f172a;
-  --primary-dark: #020617;
-  --secondary: #334155;
-  --accent: #64748b;
+  /* Brand colors - Refined Monochrome */
+  --primary: #0a0a0a;
+  --primary-dark: #000000;
+  --secondary: #171717;
+  --accent: #525252;
 
   /* Neutrals */
-  --muted: #f8fafc;
-  --muted-foreground: #64748b;
-  --border: #e2e8f0;
+  --muted: #fafafa;
+  --muted-foreground: #737373;
+  --border: #e5e5e5;
 }
 
 @theme inline {
@@ -40,9 +40,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom gradient text */
+/* Custom gradient text - elegant underline effect */
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--primary);
+  position: relative;
+  display: inline;
+  background: linear-gradient(120deg, #0a0a0a 0%, #404040 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -56,7 +59,13 @@ html {
 /* Subtle grid pattern */
 .grid-pattern {
   background-image:
-    linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
-  background-size: 64px 64px;
+    linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Smooth animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }

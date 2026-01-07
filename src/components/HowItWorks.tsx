@@ -39,11 +39,11 @@ export function HowItWorks() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 mb-4">
             Up and running in{" "}
             <span className="gradient-text">three simple steps</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
             No complex implementations. No months of setup. Start seeing value
             in days, not quarters.
           </p>
@@ -52,7 +52,7 @@ export function HowItWorks() {
         {/* Steps */}
         <div className="relative">
           {/* Connecting line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-slate-200 via-slate-300 to-slate-200 -translate-y-1/2" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-neutral-200 -translate-y-1/2" />
 
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {steps.map((step, index) => (
@@ -65,22 +65,22 @@ export function HowItWorks() {
                 className="relative"
               >
                 {/* Card */}
-                <div className="relative bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                <div className="relative bg-white rounded-2xl p-8 border border-neutral-200 hover:border-neutral-400 hover:shadow-lg transition-all">
                   {/* Step number */}
-                  <div className="absolute -top-4 left-8 px-3 py-1 gradient-bg rounded-full text-white text-sm font-semibold">
+                  <div className="absolute -top-4 left-8 px-4 py-1.5 bg-neutral-900 rounded-full text-white text-sm font-semibold">
                     {step.number}
                   </div>
 
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center mb-6 mt-2">
-                    <step.icon className="w-7 h-7 text-slate-700" />
+                  <div className="w-14 h-14 rounded-2xl bg-neutral-100 flex items-center justify-center mb-6 mt-2">
+                    <step.icon className="w-7 h-7 text-neutral-900" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                  <h3 className="text-xl font-semibold text-neutral-900 mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-neutral-600 leading-relaxed">
                     {step.description}
                   </p>
                 </div>

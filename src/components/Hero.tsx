@@ -10,9 +10,9 @@ export function Hero() {
       {/* Background pattern */}
       <div className="absolute inset-0 grid-pattern" />
 
-      {/* Gradient orbs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-slate-200 rounded-full blur-3xl opacity-30" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-slate-300 rounded-full blur-3xl opacity-30" />
+      {/* Gradient orbs - subtle depth */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-neutral-100 rounded-full blur-3xl opacity-60" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-neutral-200 rounded-full blur-3xl opacity-40" />
 
       <div className="relative max-w-6xl mx-auto px-6 text-center">
         {/* Badge */}
@@ -20,11 +20,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-sm font-medium mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-900 text-white text-sm font-medium mb-8"
         >
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-slate-900"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
           </span>
           AI-Powered Operations
         </motion.div>
@@ -60,7 +60,7 @@ export function Hero() {
         >
           <motion.a
             href="#contact"
-            className="group px-8 py-4 text-base font-medium text-white rounded-full gradient-bg hover:opacity-90 transition-all shadow-xl shadow-slate-500/25 flex items-center gap-2"
+            className="group px-8 py-4 text-base font-medium text-white rounded-full bg-neutral-900 hover:bg-neutral-800 transition-all shadow-2xl shadow-neutral-900/20 flex items-center gap-2"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -69,7 +69,7 @@ export function Hero() {
           </motion.a>
           <motion.a
             href="#features"
-            className="px-8 py-4 text-base font-medium text-slate-700 rounded-full border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-all"
+            className="px-8 py-4 text-base font-medium text-neutral-900 rounded-full border-2 border-neutral-200 hover:border-neutral-900 hover:bg-neutral-50 transition-all"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >

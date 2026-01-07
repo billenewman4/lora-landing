@@ -16,54 +16,36 @@ const features = [
     title: "Find Hidden Margin",
     description:
       "Surface pricing gaps and profit leaks you didn't know existed.",
-    color: "from-slate-700 to-slate-900",
-    bgColor: "bg-slate-100",
-    iconColor: "text-slate-700",
   },
   {
     icon: TrendingUp,
     title: "Prices That Keep Up",
     description:
       "Recommendations that adjust as your costs, market, and inventory change.",
-    color: "from-slate-600 to-slate-800",
-    bgColor: "bg-slate-100",
-    iconColor: "text-slate-700",
   },
   {
     icon: Target,
     title: "See Demand Coming",
     description:
       "Forecast seasonality, trends, and large orders before they hit.",
-    color: "from-slate-700 to-slate-900",
-    bgColor: "bg-slate-100",
-    iconColor: "text-slate-700",
   },
   {
     icon: Scale,
     title: "Right Stock, Right Time",
     description:
       "Reorder intelligence that prevents stockouts and overstock.",
-    color: "from-slate-600 to-slate-800",
-    bgColor: "bg-slate-100",
-    iconColor: "text-slate-700",
   },
   {
     icon: Bell,
     title: "Alerts Before Problems",
     description:
       "Cost spikes, margin erosion, inventory risks — flagged before they hurt.",
-    color: "from-slate-700 to-slate-900",
-    bgColor: "bg-slate-100",
-    iconColor: "text-slate-700",
   },
   {
     icon: BarChart3,
     title: "Data You Can Trust",
     description:
       "Every recommendation backed by real transaction history and market data.",
-    color: "from-slate-600 to-slate-800",
-    bgColor: "bg-slate-100",
-    iconColor: "text-slate-700",
   },
 ];
 
@@ -90,7 +72,7 @@ const itemVariants = {
 
 export function Features() {
   return (
-    <section id="features" className="py-24 bg-slate-50">
+    <section id="features" className="py-24 bg-neutral-50">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section header */}
         <motion.div
@@ -100,11 +82,11 @@ export function Features() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 mb-4">
             Everything you need to{" "}
             <span className="gradient-text">optimize operations</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
             From pricing to forecasting to inventory — Lora handles the
             complexity so you can focus on growing your business.
           </p>
@@ -122,27 +104,25 @@ export function Features() {
             <motion.div
               key={feature.title}
               variants={itemVariants}
-              className="group relative bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-lg hover:border-slate-200 transition-all duration-300"
+              className="group relative bg-white rounded-2xl p-8 border border-neutral-200 hover:border-neutral-900 hover:shadow-xl transition-all duration-300"
             >
               {/* Icon */}
-              <div
-                className={`w-12 h-12 rounded-xl ${feature.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-              >
-                <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
+              <div className="w-12 h-12 rounded-xl bg-neutral-900 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="w-6 h-6 text-white" />
               </div>
 
               {/* Content */}
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">
+              <h3 className="text-lg font-semibold text-neutral-900 mb-2">
                 {feature.title}
               </h3>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-neutral-600 leading-relaxed">
                 {feature.description}
               </p>
 
-              {/* Hover gradient line */}
-              <div
-                className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${feature.color} rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
-              />
+              {/* Corner accent */}
+              <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden rounded-tr-2xl">
+                <div className="absolute top-0 right-0 w-32 h-1 bg-neutral-900 transform rotate-45 translate-x-8 -translate-y-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
             </motion.div>
           ))}
         </motion.div>
