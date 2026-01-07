@@ -6,3 +6,4 @@ export { HowItWorks } from "./HowItWorks";
 export { SocialProof } from "./SocialProof";
 export { CTA } from "./CTA";
 export { Footer } from "./Footer";
+export { ProductMockup } from "./ProductMockup";

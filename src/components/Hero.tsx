@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { ProductMockup } from "./ProductMockup";
 
 export function Hero() {
   return (
@@ -76,39 +77,14 @@ export function Hero() {
           </motion.a>
         </motion.div>
 
-        {/* Product Screenshot Placeholder */}
+        {/* Product Mockup */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-16 relative"
         >
-          <div className="relative mx-auto max-w-4xl">
-            {/* Browser chrome mockup */}
-            <div className="bg-slate-900 rounded-t-xl p-3 flex items-center gap-2">
-              <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-red-500" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                <div className="w-3 h-3 rounded-full bg-green-500" />
-              </div>
-              <div className="flex-1 mx-4">
-                <div className="bg-slate-800 rounded-md px-4 py-1.5 text-sm text-slate-400 text-center">
-                  app.lora.ai
-                </div>
-              </div>
-            </div>
-            {/* Screenshot placeholder */}
-            <div className="bg-gradient-to-br from-slate-100 to-slate-200 rounded-b-xl aspect-[16/9] flex items-center justify-center border border-slate-200">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl gradient-bg opacity-20" />
-                <p className="text-slate-400 text-sm">
-                  Product screenshot coming soon
-                </p>
-              </div>
-            </div>
-            {/* Shadow/glow effect */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-indigo-500/20 rounded-2xl blur-2xl -z-10" />
-          </div>
+          <ProductMockup />
         </motion.div>
       </div>
     </section>
