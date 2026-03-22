@@ -16,7 +16,7 @@ export function Logo({ className = "" }: LogoProps) {
     >
       {/* Logo mark - abstract "L" with data/AI motif */}
       <div className="relative w-8 h-8">
-        <div className="absolute inset-0 bg-neutral-900 rounded-lg" />
+        <div className="absolute inset-0 bg-slate-900 rounded-lg" />
         <div className="absolute inset-0 flex items-center justify-center">
           <svg
             viewBox="0 0 24 24"
@@ -34,7 +34,7 @@ export function Logo({ className = "" }: LogoProps) {
         </div>
       </div>
       {/* Wordmark */}
-      <span className="text-xl font-semibold tracking-tight text-neutral-900">
+      <span className="text-xl font-semibold tracking-tight text-slate-900">
         Lora
       </span>
     </motion.div>

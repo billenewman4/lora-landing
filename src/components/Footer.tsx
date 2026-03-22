@@ -6,7 +6,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 bg-neutral-900">
+    <footer className="py-12 bg-slate-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
@@ -17,7 +17,7 @@ export function Footer() {
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
-                  className="w-5 h-5 text-neutral-900"
+                  className="w-5 h-5 text-slate-900"
                   stroke="currentColor"
                   strokeWidth="2.5"
                   strokeLinecap="round"
@@ -35,7 +35,7 @@ export function Footer() {
           </div>
 
           {/* Links */}
-          <div className="flex items-center gap-8 text-sm text-neutral-400">
+          <div className="flex items-center gap-8 text-sm text-slate-400">
             <a
               href="#features"
               className="hover:text-white transition-colors"
@@ -57,7 +57,7 @@ export function Footer() {
           </div>
 
           {/* Copyright */}
-          <div className="text-sm text-neutral-500">
+          <div className="text-sm text-slate-500">
             &copy; {currentYear} Lora AI. All rights reserved.
           </div>
         </div>

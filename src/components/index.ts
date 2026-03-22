@@ -1,6 +1,7 @@
 export { Logo } from "./Logo";
 export { Header } from "./Header";
 export { Hero } from "./Hero";
+export { Problem } from "./Problem";
 export { ResultsMetrics } from "./ResultsMetrics";
 export { Features } from "./Features";
 export { ImplementationTimeline } from "./ImplementationTimeline";

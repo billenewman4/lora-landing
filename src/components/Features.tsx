@@ -1,126 +1,115 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { DollarSign, Package, TrendingUp, Bell } from "lucide-react";
+import { DollarSign, ShoppingCart, BarChart3 } from "lucide-react";
 
-const features = [
+const pillars = [
   {
     icon: DollarSign,
-    title: "Pricing That Keeps Up",
-    outcome: "Never miss a margin opportunity",
+    label: "Pricing",
+    title: "Price thousands of SKUs in minutes",
     description:
-      "AI adjusts prices as costs, market conditions, and inventory levels change. Customer-specific rules built in.",
-    metric: "Avg 8% margin improvement",
+      "Write your pricing rules in plain English. Lora applies them across your entire catalog with transparent, explainable recommendations your team can accept, edit, or override.",
+    details: [
+      "Customer and category-specific pricing",
+      "Cost pass-through and margin monitoring",
+      "Learns from every decision your team makes",
+    ],
   },
   {
-    icon: Package,
-    title: "Inventory Intelligence",
-    outcome: "Right stock, right time",
+    icon: ShoppingCart,
+    label: "Procurement",
+    title: "Buy smarter, not just cheaper",
     description:
-      "Prevent stockouts and overstock with demand-based reorder points and seasonal forecasting.",
-    metric: "50% inventory reduction",
+      "Lora monitors vendor costs, lead times, and reliability to surface procurement opportunities — from renegotiation targets to alternative sourcing — before margin erodes.",
+    details: [
+      "Vendor cost benchmarking and alerts",
+      "Reorder point optimization",
+      "Supplier reliability scoring",
+    ],
   },
   {
-    icon: TrendingUp,
-    title: "Demand Forecasting",
-    outcome: "See what's coming",
+    icon: BarChart3,
+    label: "Demand Planning",
+    title: "See what's coming before it hits",
     description:
-      "Predict seasonality, trends, and large orders before they hit. Plan ahead with confidence.",
-    metric: "3-month forward visibility",
-  },
-  {
-    icon: Bell,
-    title: "Proactive Alerts",
-    outcome: "Problems flagged before they hurt",
-    description:
-      "Cost spikes, margin erosion, inventory risks — surfaced automatically so you can act fast.",
-    metric: "Real-time monitoring",
+      "Forecast demand across your catalog using sales history, seasonality, and market signals. Reduce stockouts and overstock without adding headcount.",
+    details: [
+      "Seasonal and trend-based forecasting",
+      "Overstock and stockout risk alerts",
+      "Category-level demand visibility",
+    ],
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 },
-  },
-};
-
 export function Features() {
   return (
-    <section className="py-24 bg-white" id="features">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Section header */}
+    <section className="py-28 bg-white" id="features">
+      <div className="max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-24"
         >
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900 mb-4">
-            Built for <span className="gradient-text">operations teams</span>
+          <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-slate-900 mb-4">
+            One platform for the decisions that matter
           </h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Tools that make your team more effective — not more tools to manage.
+          <p className="text-lg text-slate-400 max-w-md mx-auto">
+            Pricing, procurement, and demand planning — coordinated from a shared strategy layer.
           </p>
         </motion.div>
 
-        {/* Features grid - 2x2 */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-6"
-        >
-          {features.map((feature) => (
+        <div className="space-y-28">
+          {pillars.map((pillar, index) => (
             <motion.div
-              key={feature.title}
-              variants={itemVariants}
-              className="group relative bg-neutral-50 rounded-2xl p-8 border border-neutral-200 hover:border-neutral-300 hover:shadow-lg transition-all duration-300"
+              key={pillar.label}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
             >
-              {/* Icon and title row */}
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-neutral-900 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
+              {/* Label pill */}
+              <div className="flex items-center gap-2.5 mb-6">
+                <div className="w-9 h-9 rounded-lg bg-slate-900 flex items-center justify-center">
+                  <pillar.icon className="w-4.5 h-4.5 text-amber-400" />
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-neutral-900 mb-1">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm font-medium text-neutral-500">
-                    {feature.outcome}
-                  </p>
-                </div>
-              </div>
-
-              {/* Description */}
-              <p className="text-neutral-600 mb-4 leading-relaxed">
-                {feature.description}
-              </p>
-
-              {/* Metric badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-neutral-100 rounded-full">
-                <span className="w-1.5 h-1.5 rounded-full bg-neutral-400" />
-                <span className="text-sm font-medium text-neutral-700">
-                  {feature.metric}
+                <span className="text-xs font-semibold text-slate-400 uppercase tracking-widest">
+                  {pillar.label}
                 </span>
               </div>
+
+              {/* Title */}
+              <h3 className="font-display text-2xl sm:text-3xl md:text-4xl tracking-tight text-slate-900 mb-5 max-w-lg">
+                {pillar.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-slate-500 leading-relaxed mb-8 max-w-lg text-lg">
+                {pillar.description}
+              </p>
+
+              {/* Details */}
+              <ul className="flex flex-wrap gap-3">
+                {pillar.details.map((detail) => (
+                  <li
+                    key={detail}
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#faf9f7] rounded-full text-sm text-slate-600 border border-slate-200/60"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
+                    {detail}
+                  </li>
+                ))}
+              </ul>
+
+              {/* Divider between pillars */}
+              {index < pillars.length - 1 && (
+                <div className="mt-28 border-t border-slate-100" />
+              )}
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

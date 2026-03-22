@@ -1,19 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
+  --background: #faf9f7;
+  --foreground: #0f172a;
 
-  /* Brand colors - Refined Monochrome */
-  --primary: #0a0a0a;
-  --primary-dark: #000000;
-  --secondary: #171717;
-  --accent: #525252;
+  /* Brand colors - Precision Instrument */
+  --primary: #0f172a;
+  --primary-dark: #020617;
+  --secondary: #1e293b;
+  --accent: #b8860b;
+  --accent-light: #daa520;
 
-  /* Neutrals */
-  --muted: #fafafa;
-  --muted-foreground: #737373;
-  --border: #e5e5e5;
+  /* Warm neutrals */
+  --muted: #f5f3f0;
+  --muted-foreground: #64748b;
+  --border: #e2e0dc;
+
+  /* Font families */
+  --font-display: var(--font-instrument-serif);
+  --font-body: var(--font-dm-sans);
 }
 
 @theme inline {
@@ -23,16 +28,18 @@
   --color-primary-dark: var(--primary-dark);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-instrument-serif);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
 }
 
 /* Smooth scrolling */
@@ -40,12 +47,17 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom gradient text - elegant underline effect */
+/* Display font for headings */
+.font-display {
+  font-family: var(--font-instrument-serif), Georgia, serif;
+}
+
+/* Gradient text with warm accent */
 .gradient-text {
-  color: var(--primary);
+  color: var(--accent);
   position: relative;
   display: inline;
-  background: linear-gradient(120deg, #0a0a0a 0%, #404040 100%);
+  background: linear-gradient(135deg, #b8860b 0%, #daa520 50%, #b8860b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -56,16 +68,32 @@ html {
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
 }
 
-/* Subtle grid pattern */
+/* Subtle dot grid pattern */
 .grid-pattern {
-  background-image:
-    linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
-  background-size: 48px 48px;
+  background-image: radial-gradient(circle, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Noise grain overlay */
+.grain-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Smooth animations */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
+}
+
+/* Selection color */
+::selection {
+  background: rgba(184, 134, 11, 0.15);
+  color: var(--primary);
 }

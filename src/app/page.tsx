@@ -4,7 +4,6 @@ import {
   ResultsMetrics,
   Features,
   ImplementationTimeline,
-  IntegrationShowcase,
   SocialProof,
   FAQ,
   CTA,
@@ -20,7 +19,6 @@ export default function Home() {
         <ResultsMetrics />
         <Features />
         <ImplementationTimeline />
-        <IntegrationShowcase />
         <SocialProof />
         <FAQ />
         <CTA />

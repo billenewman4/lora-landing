@@ -1,40 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Link2, Cpu, LineChart, Rocket } from "lucide-react";
+import { Link2, FileText, BarChart3, Zap } from "lucide-react";
 
-const timelineSteps = [
+const steps = [
   {
-    day: "Day 1",
-    milestone: "Connect",
-    description: "Link your ERP or upload your data. Most integrations complete in hours.",
     icon: Link2,
+    title: "Connect",
+    description: "Plug into your ERP or upload Excel.",
   },
   {
-    day: "Week 1",
-    milestone: "Analyze",
-    description: "AI processes your inventory, costs, and sales history to build your model.",
-    icon: Cpu,
+    icon: FileText,
+    title: "Define strategy",
+    description: "Write your rules in plain English.",
   },
   {
-    day: "Week 2",
-    milestone: "Recommend",
-    description: "Review pricing and inventory recommendations. Approve with one click.",
-    icon: LineChart,
+    icon: BarChart3,
+    title: "Review",
+    description: "Accept, edit, or override recommendations.",
   },
   {
-    day: "Week 4",
-    milestone: "Optimize",
-    description: "Measure impact and continuously refine. Watch margins improve.",
-    icon: Rocket,
+    icon: Zap,
+    title: "Monitor",
+    description: "Alerts on margin leakage and cost changes.",
   },
 ];
 
 export function ImplementationTimeline() {
   return (
-    <section className="py-24 bg-neutral-900" id="how-it-works">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Section header */}
+    <section className="py-24 bg-[#faf9f7]" id="how-it-works">
+      <div className="max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,75 +37,39 @@ export function ImplementationTimeline() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white mb-4">
-            Go live in weeks, not months
+          <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-slate-900 mb-4">
+            How it works
           </h2>
-          <p className="text-lg text-neutral-400 max-w-2xl mx-auto">
-            No year-long implementations. No consulting armies.
-            Start seeing results in your first month.
+          <p className="text-lg text-slate-400 max-w-md mx-auto">
+            Live in weeks, not months. No consulting armies.
           </p>
         </motion.div>
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Connecting line - desktop only */}
-          <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-neutral-700">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {steps.map((step, index) => (
             <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
+              key={step.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              className="h-full bg-white origin-left"
-            />
-          </div>
-
-          {/* Steps */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {timelineSteps.map((step, index) => (
-              <motion.div
-                key={step.milestone}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="relative"
-              >
-                {/* Step indicator */}
-                <div className="flex items-center gap-4 mb-4 lg:flex-col lg:items-center lg:text-center">
-                  <div className="relative z-10 w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg">
-                    <step.icon className="w-5 h-5 text-neutral-900" />
-                  </div>
-                  <div className="lg:mt-4">
-                    <div className="text-sm font-semibold text-neutral-500 uppercase tracking-wide">
-                      {step.day}
-                    </div>
-                    <div className="text-xl font-semibold text-white">
-                      {step.milestone}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Description */}
-                <p className="text-neutral-400 lg:text-center">
-                  {step.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="text-center"
+            >
+              <div className="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center mx-auto mb-4">
+                <step.icon className="w-5 h-5 text-amber-400" />
+              </div>
+              <div className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-1">
+                Step {index + 1}
+              </div>
+              <h3 className="text-base font-semibold text-slate-900 mb-1.5">
+                {step.title}
+              </h3>
+              <p className="text-slate-400 text-sm">
+                {step.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
-
-        {/* Trust copy */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <p className="text-neutral-500 text-sm">
-            Most customers are seeing actionable recommendations within 2 weeks
-          </p>
-        </motion.div>
       </div>
     </section>
   );
